@@ -567,7 +567,7 @@ func client(pingchans []chan int, rchan chan Request, wchan chan Request, positi
 					old_drchan := dchans[rmsg.c].a.(chan untypedRequest)
 					old_dcchan := dchans[rmsg.c].b.(chan untypedRequest)
 					current_drchan,current_dcchan = old_drchan,old_dcchan
-					fmt.Println(clientstr + "Confirm listening to new debugger " + strconv.Itoa(rmsg.c), current_drchan,current_dcchan)
+					fmt.Println(clientstr + "Confirm SWITCHING BACK to REVIVED debugger " + strconv.Itoa(rmsg.c), current_drchan,current_dcchan)
 					continue runloop
 				} else{
 					fmt.Println(clientstr + "Unrecognized message: ", rmsg)
